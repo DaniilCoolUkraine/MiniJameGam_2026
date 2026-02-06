@@ -1,5 +1,47 @@
 {
   "dependencies": {
+    "com.cysharp.unitask": {
+      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "73a63b7f672b88f7e9992f6917eb458a8cbb6fa9"
+    },
+    "com.daniilcoolukraine.extendedhierarchy": {
+      "version": "https://github.com/DaniilCoolUkraine/ExtendedHierarchy.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0666dba2a8099d34e48903970a4faa53946afa1b"
+    },
+    "com.daniilcoolukraine.favourites": {
+      "version": "https://github.com/DaniilCoolUkraine/Favourites.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "f315832bbec51ca30efdc1a2cde494351b147987"
+    },
+    "com.daniilcoolukraine.projectsetuptools": {
+      "version": "https://github.com/DaniilCoolUkraine/ProjectSetupTools.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "282ba6f879613f48f2d6ba705c19e205ce93f817"
+    },
+    "com.daniilcoolukraine.simpleeventbus": {
+      "version": "https://github.com/DaniilCoolUkraine/SimpleEventBus.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "15f25514ccf761bcbd3820d4a2a074a17de036b8"
+    },
+    "com.daniilcoolukraine.simplestatemachine": {
+      "version": "https://github.com/DaniilCoolUkraine/SimpleStateMachine.git",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "0d7854749acd95ac8bc6060f710d6fc3c3187268"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.2",
       "depth": 0,
