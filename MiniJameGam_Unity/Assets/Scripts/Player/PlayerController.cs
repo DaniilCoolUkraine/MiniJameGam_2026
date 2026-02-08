@@ -9,7 +9,8 @@ namespace MiniJameGam.Player
     {
         [Header("References")] 
         [SerializeField] private Rigidbody2D _rb;
-
+        [SerializeField] private Animator _animator;
+        
         [Header("Config")] 
         [SerializeField] private float _speed;
         [SerializeField] private float _maxSpeed;
@@ -26,6 +27,8 @@ namespace MiniJameGam.Player
         {
             HandleMovement();
             HandleRotation();
+
+            _animator.SetFloat("Speed", _rb.linearVelocity.sqrMagnitude / (_maxSpeed * _maxSpeed));
         }
 
         private void HandleMovement()
@@ -43,7 +46,7 @@ namespace MiniJameGam.Player
         private void HandleRotation()
         {
             Vector2 vel = _rb.linearVelocity;
-            if (vel.sqrMagnitude > 0.1f) // avoid jitter when nearly still
+            if (vel.sqrMagnitude > 0.01f)
             {
                 float targetAngle = Mathf.Atan2(vel.y, vel.x) * Mathf.Rad2Deg;
                 float smoothed = Mathf.LerpAngle(_rb.rotation, targetAngle, _rotationSpeed * Time.fixedDeltaTime);
