@@ -5,7 +5,7 @@ using Zenject;
 namespace MiniJameGam.Player
 {
     [RequireComponent(typeof(Rigidbody2D))]
-    public class PlayerController : MonoBehaviour
+    public class PlayerController : MonoBehaviour, IPlayer
     {
         [Header("References")] 
         [SerializeField] private Rigidbody2D _rb;

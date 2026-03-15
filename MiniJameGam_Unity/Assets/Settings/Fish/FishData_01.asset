@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2c7c4a61cd44f97a319135d56350c0d, type: 3}
+  m_Name: FishData_01
+  m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Fish.FishDataSO
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: Behaviour
+      Entry: 7
+      Data: 0|MiniJameGam.Fish.Behaviour.AvoidPlayerFishBehaviour, Assembly-CSharp
+    - Name: _avoidanceRadius
+      Entry: 3
+      Data: 5
+    - Name: _idleSpeed
+      Entry: 3
+      Data: 1
+    - Name: _runSpeed
+      Entry: 3
+      Data: 3
+    - Name: _idleUpdateTime
+      Entry: 4
+      Data: 10
+    - Name: _idleWanderRadius
+      Entry: 4
+      Data: 10
+    - Name: 
+      Entry: 8
+      Data: 
+  Image: {fileID: 21300000, guid: 6c7153ed44f631c43928d52beef057f5, type: 3}
