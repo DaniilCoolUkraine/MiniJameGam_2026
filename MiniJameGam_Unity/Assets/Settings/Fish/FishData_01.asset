@@ -25,13 +25,13 @@ MonoBehaviour:
       Entry: 7
       Data: 0|MiniJameGam.Fish.Behaviour.AvoidPlayerFishBehaviour, Assembly-CSharp
     - Name: _avoidanceRadius
-      Entry: 3
+      Entry: 4
       Data: 5
     - Name: _idleSpeed
-      Entry: 3
+      Entry: 4
       Data: 1
     - Name: _runSpeed
-      Entry: 3
+      Entry: 4
       Data: 3
     - Name: _idleUpdateTime
       Entry: 4
@@ -42,4 +42,5 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  Image: {fileID: 21300000, guid: 6c7153ed44f631c43928d52beef057f5, type: 3}
+  Image: {fileID: 21300000, guid: 3b145cc1e32a0994e91695919b11c8dc, type: 3}
+  SpriteRotation: 33

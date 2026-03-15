@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a2c7c4a61cd44f97a319135d56350c0d, type: 3}
-  m_Name: FishData_02
+  m_Name: FishData_03
   m_EditorClassIdentifier: Assembly-CSharp::MiniJameGam.Fish.FishDataSO
   serializationData:
     SerializedFormat: 2
@@ -23,13 +23,13 @@ MonoBehaviour:
     SerializationNodes:
     - Name: Behaviour
       Entry: 7
-      Data: 0|MiniJameGam.Fish.Behaviour.AvoidPlayerFishBehaviour, Assembly-CSharp
-    - Name: _avoidanceRadius
-      Entry: 4
-      Data: 2
-    - Name: _idleSpeed
+      Data: 0|MiniJameGam.Fish.Behaviour.FollowPlayerFishBehaviour, Assembly-CSharp
+    - Name: _followRadius
       Entry: 4
       Data: 3
+    - Name: _idleSpeed
+      Entry: 4
+      Data: 0.2
     - Name: _runSpeed
       Entry: 4
       Data: 5
@@ -38,9 +38,9 @@ MonoBehaviour:
       Data: 3
     - Name: _idleWanderRadius
       Entry: 4
-      Data: 5
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
-  Image: {fileID: 21300000, guid: 754ee90935a7c784f837a8bc77862080, type: 3}
-  SpriteRotation: 20
+  Image: {fileID: 21300000, guid: 6c7153ed44f631c43928d52beef057f5, type: 3}
+  SpriteRotation: 21.8

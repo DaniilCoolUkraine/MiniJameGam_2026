@@ -5,15 +5,15 @@ using UnityEngine;
 namespace MiniJameGam.Fish.Behaviour
 {
     [Serializable]
-    public class AvoidPlayerFishBehaviour : IFishBehaviour
+    public class FollowPlayerFishBehaviour : IFishBehaviour
     {
-        [SerializeField] private float _avoidanceRadius;
+        [SerializeField] private float _followRadius;
         [SerializeField] private float _idleSpeed;
         [SerializeField] private float _runSpeed;
         [SerializeField] private float _idleUpdateTime;
         [SerializeField] private float _idleWanderRadius;
 
-        public float AvoidanceRadius => _avoidanceRadius;
+        public float FollowRadius => _followRadius;
         public float IdleWanderRadius => _idleWanderRadius;
 
         private IFish _fish;
@@ -25,12 +25,12 @@ namespace MiniJameGam.Fish.Behaviour
 
         public IFishBehaviour Clone(IFish fish, IPlayer player)
         {
-            return new AvoidPlayerFishBehaviour()
+            return new FollowPlayerFishBehaviour()
             {
                 _fish = fish,
                 _player = player,
 
-                _avoidanceRadius = _avoidanceRadius,
+                _followRadius = _followRadius,
                 _idleSpeed = _idleSpeed,
                 _runSpeed = _runSpeed,
                 _idleUpdateTime = _idleUpdateTime,
@@ -42,11 +42,11 @@ namespace MiniJameGam.Fish.Behaviour
         {
             // calculate distance and suggest location where to move at 
             var distance = Vector2.Distance(_fish.transform.position, _player.transform.position);
-            if (distance < _avoidanceRadius)
+            if (distance < _followRadius)
             {
                 _isRunning = true;
-                var direction = (_fish.transform.position - _player.transform.position).normalized;
-                _finalPosition = _fish.transform.position + direction * _avoidanceRadius;
+                var direction = (_player.transform.position - _fish.transform.position).normalized;
+                _finalPosition = _fish.transform.position + direction * _followRadius;
             }
             else
             {

@@ -23,12 +23,20 @@ namespace MiniJameGam.Fish.Editor
             if (fishData == null)
                 return;
 
-            if (fishData.Behaviour is AvoidPlayerFishBehaviour behaviour)
+            if (fishData.Behaviour is AvoidPlayerFishBehaviour avoidBehaviour)
             {
                 Handles.color = Color.red;
-                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, behaviour.AvoidanceRadius);
+                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, avoidBehaviour.AvoidanceRadius);
                 Handles.color = Color.green;
-                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, behaviour.IdleWanderRadius);
+                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, avoidBehaviour.IdleWanderRadius);
+            }
+            
+            if (fishData.Behaviour is FollowPlayerFishBehaviour followBehaviour)
+            {
+                Handles.color = Color.red;
+                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, followBehaviour.FollowRadius);
+                Handles.color = Color.green;
+                Handles.DrawWireDisc(fish.transform.position, Vector3.forward, followBehaviour.IdleWanderRadius);
             }
 
             if (!Application.isPlaying)

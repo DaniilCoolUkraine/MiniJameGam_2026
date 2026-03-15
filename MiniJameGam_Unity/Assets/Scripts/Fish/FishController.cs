@@ -1,4 +1,3 @@
-using System;
 using MiniJameGam.Fish.Behaviour;
 using UnityEngine;
 
@@ -32,7 +31,7 @@ namespace MiniJameGam.Fish
             HandleRotation();
         }
 
-        public void MoveTowards(Vector2 finalPosition, int speed)
+        public void MoveTowards(Vector2 finalPosition, float speed)
         {
             var direction = (finalPosition - (Vector2)transform.position).normalized;
             var force = direction * speed;
@@ -58,14 +57,16 @@ namespace MiniJameGam.Fish
             }
         }
 
-        
-        
 #if UNITY_EDITOR
         private void OnValidate()
         {
             if (_fishData != null)
             {
+                _fishData.OnValidateEvent -= OnValidate; 
+                _fishData.OnValidateEvent += OnValidate; 
+
                 _renderer.sprite = _fishData.Image;
+                _renderer.transform.rotation = Quaternion.Euler(0, 0, _fishData.SpriteRotation);
             }
         }
 #endif
